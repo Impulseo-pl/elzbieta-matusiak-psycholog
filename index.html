@@ -7,7 +7,7 @@
 <meta name="description" content="Konsultacje psychologiczne online. Wybierz termin w kalendarzu, zapłać BLIK-iem lub przelewem i połącz się z domu. Elżbieta Matusiak, psycholog.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 <script>(function(){try{if(String(location.protocol).indexOf('http')!==0)return;try{if(/[?&#]team=1/.test(location.search+location.hash)){localStorage.setItem('nb_team','1');}}catch(e){}try{if(localStorage.getItem('nb_team')==='1')return;}catch(e){}if((document.referrer||'').indexOf('crm-newbeginning')>-1)return;try{if(navigator.webdriver)return;}catch(e){}try{if(/^https?:\/\/(kris20032|impulseo-pl)\.github\.io\/?$/i.test(document.referrer||''))return;}catch(e){}if(sessionStorage.getItem('_dv'))return;sessionStorage.setItem('_dv','1');var seg=(location.pathname.split('/').filter(Boolean)[0])||'';var base=location.origin+(seg?('/'+seg):'');var ua='';try{ua=(navigator.userAgent||'').slice(0,300);}catch(e){}var EP='https://zngfubfinbojfgaxdrbf.supabase.co/rest/v1/demo_views';var KEY='sb_publishable_MWwoyGlSCWnJ4awtOPF0ow_ZVS0Y8qK';function send(g){try{fetch(EP,{method:'POST',keepalive:true,headers:{'Content-Type':'application/json','apikey':KEY,'Authorization':'Bearer '+KEY,'Prefer':'return=minimal'},body:JSON.stringify({demo_url:base,page:location.pathname,referrer:(document.referrer||null),user_agent:(ua||null),ip:(g&&g.ip)||null,country:(g&&g.cc)||null,city:(g&&g.city)||null})}).catch(function(){});}catch(e){}}var done=false;function once(g){if(done)return;done=true;send(g);}try{var t=setTimeout(function(){once(null);},1500);fetch('https://ipwho.is/?fields=ip,success,country_code,city',{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){clearTimeout(t);once(d&&d.success!==false?{ip:d.ip,cc:d.country_code,city:d.city}:null);}).catch(function(){clearTimeout(t);once(null);});}catch(e){once(null);}}catch(e){}})();
 </script>
@@ -16,80 +16,89 @@
 <body>
 <div class="demo-bar">Wersja poglądowa strony. Pola <em class="uz">podkreślone</em> uzupełnimy razem z Panią Elżbietą.</div>
 <header class="top">
-  <div class="wrap top-in">
-    <a class="logo" href="#"><b>Elżbieta Matusiak</b><small>psycholog · konsultacje online</small></a>
-    <nav class="menu" aria-label="Główne">
-      <a href="#jak">Jak to działa</a><a href="#tematy">Z czym pracuję</a><a href="#o-mnie">O mnie</a><a href="#cennik">Cennik</a><a href="#pytania">Pytania</a><a href="#kontakt">Kontakt</a>
-    </nav>
-    <a class="btn btn-a btn-sm" href="#terminy">Umów sesję</a>
-    <button class="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="top-row">
+    <div class="top-l">Konsultacje psychologiczne online</div>
+    <a class="logo" href="#"><b>Elżbieta Matusiak</b><small>Psycholog</small><i>Pomoc psychologiczna online</i></a>
+    <div class="top-r">
+      <a class="top-tel" href="tel:+48535777480"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>535 777 480</a>
+      <a class="btn btn-sm" href="#terminy">Rezerwacja wizyt</a>
+      <button class="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+    </div>
   </div>
+  <nav class="menu" aria-label="Główne">
+    <a href="#jak">Jak się umówić</a><a href="#tematy">W czym pomagam</a><a href="#terminy">Terminy</a><a href="#o-mnie">O mnie</a><a href="#cennik">Cennik</a><a href="#pytania">Pytania</a><a href="#kontakt">Kontakt</a>
+  </nav>
 </header>
 
 <main>
-<section class="hero">
-  <div class="wrap hero-in">
-    <div>
-      <h1>Psycholog online. Rozmowa z&nbsp;domu, termin z&nbsp;kalendarza.</h1>
-      <p class="lead">Spotykamy się na wideorozmowie. Termin wybierasz w kalendarzu poniżej, płacisz online przy rezerwacji, a link do spotkania dostajesz mailem.</p>
-      <div class="hero-cta">
-        <a class="btn btn-a" href="#terminy">Zapisz się na sesję</a>
-        <a class="btn btn-o" href="#jak">Jak to wygląda?</a>
-      </div>
-      <div class="hero-next">
-        <span>Najbliższy wolny termin: <strong id="najblizszy">…</strong></span>
-        <span><a href="#terminy">Zobacz wszystkie terminy</a></span>
-      </div>
+<section class="hero c">
+  <div class="wrap">
+    <p class="eyebrow">Elżbieta Matusiak · psycholog</p>
+    <h1>Konsultacje psychologiczne online</h1>
+    <p class="lead">Porozmawiaj z psychologiem z domu. Termin wybierasz w kalendarzu, płacisz online, a link do spotkania dostajesz mailem.</p>
+    <div class="cta-row">
+      <a class="btn" href="#terminy">Umów się teraz</a>
+      <a class="btn" href="tel:+48535777480">Zadzwoń: 535 777 480</a>
     </div>
-    <figure class="hero-fig">
-      <img src="img/slonce-1600.webp" srcset="img/slonce-800.webp 800w, img/slonce-1600.webp 1600w" sizes="(max-width:980px) 100vw, 520px" width="1600" height="1402" alt="Obraz Vilhelma Hammershøia: kobieta przy stoliku w jasnym pokoju, słońce na podłodze" fetchpriority="high">
+    <p class="hero-next">Najbliższy wolny termin: <strong id="najblizszy">…</strong> · <a href="#terminy">zobacz wszystkie</a></p>
+    <figure class="hero-img">
+      <img src="img/slonce-1600.webp" srcset="img/slonce-800.webp 800w, img/slonce-1600.webp 1600w" sizes="(max-width:860px) 100vw, 820px" width="1600" height="1402" alt="Obraz Vilhelma Hammershøia: kobieta przy stoliku w jasnym pokoju, słońce na podłodze" fetchpriority="high">
       <figcaption>Vilhelm Hammershøi, „Pokój przy Strandgade ze słońcem na podłodze”, 1901. Obraz poglądowy.</figcaption>
     </figure>
   </div>
 </section>
 
-<section class="sec" id="jak">
+<section class="sec c" style="padding-top:36px">
   <div class="wrap">
-    <div class="sec-head">
-      <h2>Jak to działa</h2>
-      <p class="lead">Cała rezerwacja odbywa się na tej stronie i zajmuje kilka minut. Nie trzeba dzwonić ani czekać na odpowiedź maila.</p>
+    <h2 style="color:var(--wine-d)">Konsultacja online u mnie to:</h2>
+    <div class="cechy">
+      <div class="cecha"><h3>Poufność</h3><p>Psychologa obowiązuje tajemnica zawodowa. To, o czym rozmawiamy, zostaje między nami.</p></div>
+      <div class="cecha"><h3>Rozmowa z domu</h3><p>Łączysz się z miejsca, w którym czujesz się bezpiecznie. Bez dojazdów i poczekalni.</p></div>
+      <div class="cecha"><h3>Termin od ręki</h3><p>W kalendarzu widzisz wolne godziny i rezerwujesz od razu, bez dzwonienia.</p></div>
+      <div class="cecha"><h3>Płatność online</h3><p>BLIK, szybki przelew albo karta. Termin jest Twój zaraz po opłaceniu.</p></div>
     </div>
-    <ol class="kroki">
-      <li><h3>Wybierz temat</h3><p>Zaznacz, z czym przychodzisz. Jeśli trudno to nazwać, wybierz konsultację ogólną.</p></li>
-      <li><h3>Wybierz termin</h3><p>W kalendarzu widać tylko wolne godziny. Klikasz tę, która Ci pasuje.</p></li>
-      <li><h3>Opłać online</h3><p>BLIK, szybki przelew albo karta. Termin jest Twój od razu po płatności.</p></li>
-      <li><h3>Połącz się</h3><p>Link do wideorozmowy przychodzi mailem razem z przypomnieniem przed sesją.</p></li>
-    </ol>
+    <div class="krok-box">
+      <h2>Zrób ten pierwszy krok</h2>
+      <p>Umów konsultację wstępną online</p>
+      <div class="cta-row"><a class="btn" href="#terminy">Umów się teraz</a><a class="btn" href="tel:+48535777480">Zadzwoń: 535 777 480</a></div>
+    </div>
   </div>
 </section>
 
-<section class="sec white" id="tematy">
+<section class="sec band" id="jak">
   <div class="wrap">
-    <div class="sec-head">
-      <h2>Z czym możesz przyjść</h2>
-      <p class="lead">Wybierz temat, a od razu przejdziesz do kalendarza. <em class="uz">Lista do potwierdzenia z Panią Elżbietą.</em></p>
+    <h2>Jak łatwo i szybko umówić się na <b>konsultację online?</b></h2>
+    <div class="jak">
+      <figure class="img-r" style="margin:0"><img src="img/drzwi-800.webp" srcset="img/drzwi-800.webp 800w, img/drzwi-1600.webp 1600w" sizes="(max-width:980px) 100vw, 540px" width="1600" height="1355" alt="Obraz Vilhelma Hammershøia: otwarte białe drzwi" loading="lazy"><figcaption>Vilhelm Hammershøi, „Białe drzwi”, 1905. Obraz poglądowy.</figcaption></figure>
+      <ol>
+        <li><h3>Wybierz temat i termin</h3><p>Zaznacz, z czym przychodzisz, i kliknij wolną godzinę w kalendarzu.</p><p style="margin-top:12px"><a class="btn btn-sm" href="#terminy">Zarezerwuj termin</a></p></li>
+        <li><h3>Łatwo zapłać za wizytę</h3><p>BLIK, Przelewy24 albo karta płatnicza.</p></li>
+        <li><h3>Rozpocznij konsultację online</h3><p>Link do wideorozmowy przychodzi mailem. W umówionej godzinie klikasz go i jesteśmy połączeni.</p></li>
+      </ol>
     </div>
+  </div>
+</section>
+
+<section class="sec" id="tematy">
+  <div class="wrap">
+    <h2>W czym mogę Ci <span class="w">pomóc?</span></h2>
+    <p class="lead" style="max-width:640px;font-size:16px">Wybierz temat, a od razu przejdziesz do kalendarza. <em class="uz">Lista do potwierdzenia z Panią Elżbietą.</em></p>
     <div class="tematy">
-      <div class="temat"><div><h3>Obniżony nastrój</h3><p>Smutek, brak energii, poczucie, że nic nie cieszy.</p></div><a href="#terminy" data-temat="Obniżony nastrój">Umów sesję</a></div>
-      <div class="temat"><div><h3>Lęk i napięcie</h3><p>Ciągłe zamartwianie się, ataki paniki, trudności ze snem.</p></div><a href="#terminy" data-temat="Lęk i napięcie">Umów sesję</a></div>
-      <div class="temat"><div><h3>Relacje</h3><p>Konflikty w związku, w rodzinie albo w pracy.</p></div><a href="#terminy" data-temat="Relacje">Umów sesję</a></div>
-      <div class="temat"><div><h3>Kryzys i trudna zmiana</h3><p>Rozstanie, strata, utrata pracy, przeprowadzka.</p></div><a href="#terminy" data-temat="Kryzys i trudna zmiana">Umów sesję</a></div>
-      <div class="temat"><div><h3>Stres i przeciążenie</h3><p>Zmęczenie, które nie mija po weekendzie, wypalenie.</p></div><a href="#terminy" data-temat="Stres i przeciążenie">Umów sesję</a></div>
-      <div class="temat"><div><h3>Poczucie własnej wartości</h3><p>Ciągła samokrytyka, trudność w stawianiu granic.</p></div><a href="#terminy" data-temat="Poczucie własnej wartości">Umów sesję</a></div>
+      <a class="temat" href="#terminy" data-temat="Obniżony nastrój"><span class="ikona"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 18a5 5 0 1 1 1.5-9.8A6 6 0 0 1 19.5 11 3.5 3.5 0 0 1 18 18z"/></svg></span><span><h3>Nastrój</h3><p>Smutek, brak energii, poczucie, że nic nie cieszy.</p></span></a>
+      <a class="temat" href="#terminy" data-temat="Lęk i napięcie"><span class="ikona"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 12h3l2-5 3 10 3-8 2 3h5"/></svg></span><span><h3>Lęk i napięcie</h3><p>Zamartwianie się, ataki paniki, trudności ze snem.</p></span></a>
+      <a class="temat" href="#terminy" data-temat="Relacje"><span class="ikona"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg></span><span><h3>Relacje</h3><p>Konflikty w związku, w rodzinie albo w pracy.</p></span></a>
+      <a class="temat" href="#terminy" data-temat="Kryzys i trudna zmiana"><span class="ikona"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 17c3-6 5-6 8 0s5 6 8 0"/><path d="M4 9c3-4 5-4 8 0s5 4 8 0"/></svg></span><span><h3>Kryzys i zmiana</h3><p>Rozstanie, strata, utrata pracy, przeprowadzka.</p></span></a>
+      <a class="temat" href="#terminy" data-temat="Stres i przeciążenie"><span class="ikona"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="8" width="16" height="9" rx="2"/><path d="M21 11v3M6 11v3"/></svg></span><span><h3>Stres i przeciążenie</h3><p>Zmęczenie, które nie mija po weekendzie, wypalenie.</p></span></a>
+      <a class="temat" href="#terminy" data-temat="Poczucie własnej wartości"><span class="ikona"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1-4 4-6 7-6s6 2 7 6"/></svg></span><span><h3>Poczucie wartości</h3><p>Ciągła samokrytyka, trudność w stawianiu granic.</p></span></a>
     </div>
-    <div class="ogolna">
-      <p><b>Nie wiesz, jak nazwać to, co się dzieje?</b> To normalne. Wybierz konsultację ogólną. Na pierwszym spotkaniu porozmawiamy o tym, co Cię sprowadza, i ustalimy, co dalej.</p>
-      <a class="btn btn-a" href="#terminy" data-temat="Konsultacja ogólna">Konsultacja ogólna</a>
-    </div>
+    <p class="ogolna">Nie wiesz, jak nazwać to, co się dzieje? Wybierz <a href="#terminy" data-temat="Konsultacja ogólna">konsultację ogólną</a>. Na pierwszym spotkaniu porozmawiamy o tym, co Cię sprowadza.</p>
   </div>
 </section>
 
-<section class="sec" id="terminy">
+<section class="sec rez-wrap" id="terminy">
   <div class="wrap">
-    <div class="sec-head">
-      <h2>Zarezerwuj termin</h2>
-      <p class="lead">Wybierz rodzaj spotkania, dzień i godzinę. Tak będzie wyglądała rezerwacja na gotowej stronie. W demie terminy są przykładowe, a płatność nie pobiera pieniędzy.</p>
-    </div>
+    <h2 class="c">Zarezerwuj <span class="w">termin</span></h2>
+    <p class="lead c" style="max-width:680px;margin:0 auto;font-size:16px">Tak będzie wyglądała rezerwacja na gotowej stronie. W demie terminy są przykładowe, a płatność nie pobiera pieniędzy.</p>
     <div class="rez">
       <aside class="rez-side">
         <h3>Twoja rezerwacja</h3>
@@ -152,37 +161,36 @@
             <button type="button" class="wstecz" id="odNowa">Zarezerwuj kolejny termin</button>
           </div>
         </form>
+
       </div>
     </div>
   </div>
 </section>
 
-<section class="sec white" id="o-mnie">
+<section class="sec band" id="o-mnie">
   <div class="wrap omnie">
-    <figure class="hero-fig" style="margin:0">
-      <img src="img/drzwi-800.webp" srcset="img/drzwi-800.webp 800w, img/drzwi-1600.webp 1600w" sizes="(max-width:980px) 100vw, 480px" width="1600" height="1355" alt="Obraz Vilhelma Hammershøia: otwarte białe drzwi do kolejnych pokoi" loading="lazy">
-      <figcaption>Vilhelm Hammershøi, „Białe drzwi”, 1905. Tu pojawi się zdjęcie Pani Elżbiety.</figcaption>
+    <figure class="img-r" style="margin:0">
+      <div style="aspect-ratio:4/5;border-radius:16px;background:#fff;border:1.5px dashed #c9a9b2;display:grid;place-items:center;color:var(--wine);text-align:center;padding:20px">Tu pojawi się zdjęcie<br>Pani Elżbiety</div>
     </figure>
     <div>
-      <h2>O mnie</h2>
-      <p class="lead">Nazywam się Elżbieta Matusiak, jestem psychologiem. Prowadzę konsultacje online, więc możesz porozmawiać ze mną z dowolnego miejsca, w którym czujesz się bezpiecznie.</p>
+      <h2>Elżbieta Matusiak – psycholog online</h2>
+      <p>Prowadzę konsultacje psychologiczne online, więc możesz porozmawiać ze mną z dowolnego miejsca, w którym czujesz się bezpiecznie.</p>
       <p><em class="uz">Kilka zdań od Pani Elżbiety: jak pracuje, do kogo kieruje pomoc, czego można się spodziewać po pierwszej rozmowie.</em></p>
       <ul class="fakty">
-        <li><b>Wykształcenie</b><span><em class="uz">do uzupełnienia</em></span></li>
-        <li><b>Nurt pracy</b><span><em class="uz">do uzupełnienia</em></span></li>
-        <li><b>Szkolenia i superwizja</b><span><em class="uz">do uzupełnienia</em></span></li>
-        <li><b>Forma spotkań</b><span>Online, wideorozmowa</span></li>
+        <li><b>Wykształcenie:</b> <em class="uz">do uzupełnienia</em></li>
+        <li><b>Nurt pracy:</b> <em class="uz">do uzupełnienia</em></li>
+        <li><b>Szkolenia i superwizja:</b> <em class="uz">do uzupełnienia</em></li>
+        <li><b>Forma spotkań:</b> online, wideorozmowa</li>
       </ul>
+      <div class="btns"><a class="btn btn-l" href="#terminy">Umów wizytę</a><a class="btn btn-l" href="tel:+48535777480">Zadzwoń: 535 777 480</a></div>
     </div>
   </div>
 </section>
 
 <section class="sec" id="cennik">
   <div class="wrap">
-    <div class="sec-head">
-      <h2>Cennik</h2>
-      <p class="lead">Płacisz online przy rezerwacji, BLIK-iem, przelewem albo kartą.</p>
-    </div>
+    <h2 class="c">Cennik</h2>
+    <p class="lead c" style="font-size:16px">Płacisz online przy rezerwacji: BLIK, przelew albo karta.</p>
     <table class="cen">
       <thead><tr><th>Spotkanie</th><th>Czas</th><th>Cena</th></tr></thead>
       <tbody>
@@ -191,17 +199,21 @@
       </tbody>
     </table>
     <p class="pod-cen">Zasady odwołania lub przełożenia wizyty: <em class="uz">do ustalenia z Panią Elżbietą</em>.</p>
-    <p><a class="btn btn-a" href="#terminy">Wybierz termin</a></p>
+    <div class="krok-box">
+      <h2>Zrób ten pierwszy krok</h2>
+      <p>Umów konsultację wstępną online</p>
+      <div class="cta-row"><a class="btn" href="#terminy">Umów się teraz</a><a class="btn" href="tel:+48535777480">Zadzwoń: 535 777 480</a></div>
+    </div>
   </div>
 </section>
 
-<section class="sec white" id="pytania">
+<section class="sec faq-band" id="pytania">
   <div class="wrap">
-    <div class="sec-head"><h2>Najczęstsze pytania</h2></div>
+    <h2>Jeśli dotarłeś aż tutaj, to pewnie masz jeszcze kilka pytań:</h2>
     <div class="faq">
-      <details open><summary>Jak wygląda sesja online?</summary><p>To rozmowa wideo, taka jak rozmowa twarzą w twarz w gabinecie, tylko przez ekran. Po rezerwacji dostajesz mailem link. W umówionej godzinie klikasz go i jesteśmy połączeni.</p></details>
-      <details><summary>Czego potrzebuję?</summary><p>Wystarczy komputer albo telefon z kamerą i mikrofonem, stabilny internet i miejsce, w którym nikt nam nie przeszkodzi. Słuchawki pomagają, ale nie są konieczne.</p></details>
-      <details><summary>Jak wygląda pierwsze spotkanie?</summary><p>Rozmawiamy o tym, co Cię sprowadza, i o tym, czego oczekujesz. Na koniec wspólnie ustalamy, czy i w jakiej formie warto kontynuować spotkania.</p></details>
+      <details open><summary>Jak wygląda konsultacja online?</summary><p>To rozmowa wideo, jak spotkanie twarzą w twarz, tylko przez ekran. Po rezerwacji dostajesz mailem link. W umówionej godzinie klikasz go i jesteśmy połączeni.</p></details>
+      <details><summary>Czego potrzebuję do rozmowy?</summary><p>Komputera albo telefonu z kamerą i mikrofonem, stabilnego internetu i miejsca, w którym nikt nam nie przeszkodzi. Słuchawki pomagają, ale nie są konieczne.</p></details>
+      <details><summary>Jak wygląda pierwsze spotkanie?</summary><p>Rozmawiamy o tym, co Cię sprowadza, i czego oczekujesz. Na koniec wspólnie ustalamy, czy i w jakiej formie warto kontynuować spotkania.</p></details>
       <details><summary>Jak mogę zapłacić?</summary><p>Online przy rezerwacji: BLIK, szybki przelew przez Przelewy24 albo kartą płatniczą. Termin jest zarezerwowany od razu po opłaceniu.</p></details>
       <details><summary>Czy rozmowa jest poufna?</summary><p>Tak. Psychologa obowiązuje tajemnica zawodowa.</p></details>
       <details><summary>Co, jeśli nie mogę przyjść?</summary><p>Termin możesz przełożyć lub odwołać. <em class="uz">Zasady i termin odwołania do uzupełnienia.</em></p></details>
@@ -211,11 +223,11 @@
 
 <div class="kryzys"><div class="wrap"><span><b>Potrzebujesz pomocy natychmiast?</b> Konsultacje online nie są pomocą w nagłym kryzysie.</span><span>Numer alarmowy <b>112</b></span><span>Centrum Wsparcia, całodobowo <b>800 70 2222</b></span><span>Telefon zaufania dla dzieci i młodzieży <b>116 111</b></span></div></div>
 
-<section class="sec kontakt" id="kontakt">
-  <div class="wrap kontakt-in">
+<section class="sec" id="kontakt" style="background:#faf7f8">
+  <div class="wrap kontakt-in kontakt">
     <div>
       <h2>Kontakt</h2>
-      <p class="lead">Masz pytanie przed rezerwacją? Napisz albo zadzwoń. Odpowiem, gdy tylko skończę spotkania.</p>
+      <p class="lead" style="font-size:16px">Masz pytanie przed rezerwacją? Napisz albo zadzwoń.</p>
       <ul class="kanaly">
         <li><small>Telefon</small><a href="tel:+48535777480">+48 535 777 480</a></li>
         <li><small>E-mail</small><a href="mailto:elzbieta.matusiak4@wp.pl">elzbieta.matusiak4@wp.pl</a></li>
@@ -226,7 +238,7 @@
       <label class="f" for="k-imie">Imię</label><input type="text" id="k-imie">
       <label class="f" for="k-mail">E-mail</label><input type="email" id="k-mail">
       <label class="f" for="k-msg">Wiadomość</label><textarea id="k-msg" rows="5"></textarea>
-      <button class="btn btn-a" type="submit">Wyślij wiadomość</button>
+      <button class="btn" type="submit">Wyślij wiadomość</button>
     </form>
   </div>
 </section>
