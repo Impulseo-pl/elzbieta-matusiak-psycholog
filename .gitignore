@@ -1,0 +1,4 @@
+_src/w*.jpg
+_src/*.png
+_src/sheet.jpg
+__pycache__/
